@@ -1,4 +1,5 @@
 import torch
+from contextlib import nullcontext
 
 def resolve_device(cfg):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu") if cfg.device == "auto" else torch.device(cfg.device)
